@@ -1,0 +1,46 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "root": true,
+    // "extends": "eslint:all",
+    "extends": "eslint:recommended",
+    "rules": {
+        "indent": [
+            1,
+            2
+        ],
+        "quotes": [
+            "warn",
+            "single",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
+            }
+        ],
+        "brace-style": [
+            "warn",
+            "1tbs",
+            {
+                "allowSingleLine": true
+            }
+        ],
+        "semi": [
+            "warn",
+            "always"
+        ],
+        "no-irregular-whitespace": "warn",
+        "no-trailing-spaces": "warn",
+        "no-multi-spaces": "warn",
+        "space-infix-ops": "warn",
+        "eqeqeq": "warn",
+        "space-before-blocks": "warn",
+        "no-unused-vars": "warn",
+        "comma-spacing": "warn"
+    }
+}

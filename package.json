@@ -1,0 +1,32 @@
+{
+  "name": "euler_practice",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0"
+  },
+  "scripts": {
+    "test": "find . -iname \"problem_*\" -exec node {} \\;",
+    "start":"nodemon problem_007.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The1Krutz/euler_practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The1Krutz/euler_practice/issues"
+  },
+  "homepage": "https://github.com/The1Krutz/euler_practice#readme",
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules"
+    ],
+    "ext": "js"
+  },
+  "type":"module"
+}
