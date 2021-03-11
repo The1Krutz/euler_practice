@@ -13,15 +13,15 @@ export function arrayEquals(arr1, arr2) {
 
   if(arr1.length !== arr2.length) return false;
 
-  for(let i = 0;i < arr1.length;i++) {
+  for(let i = 0; i < arr1.length; i++) {
     if(arr1[i] !== arr2[i]) return false;
   }
 
   return true;
 }
 
-assert(arrayEquals([1, 5], [1, 5]), 'array comparison is breaking');
-assert(arrayEquals([1, 3, 5], [1, 5, 3]), 'array comparison is breaking');
+assert(arrayEquals([1, 5], [1, 5]), 'arrayEquals needs help');
+assert(arrayEquals([1, 3, 5], [1, 5, 3]), 'arrayEquals needs help');
 
 /**
  *
@@ -33,7 +33,7 @@ export function isPrime(number) {
   if(number === 2) return true;
   if(number % 2 === 0) return false;
 
-  for(let i = 3;i < number;i += 2)
+  for(let i = 3; i < number; i += 2)
     if(number % i === 0)
       return false;
   return true;
@@ -44,3 +44,18 @@ for(const prime of low_primes) {
 }
 assert(!isPrime(1), 'isPrime needs help');
 assert(!isPrime(8), 'isPrime needs help');
+
+/**
+ *
+ * @param {function} fn
+ */
+export function TimedCall(fn) {
+
+  let hrstart = process.hrtime();
+  let res = fn();
+  let hrend = process.hrtime(hrstart);
+
+  console.log(`done in ${hrend[0]}s ${hrend[1] / 1000000}ms`);
+
+  return res;
+}

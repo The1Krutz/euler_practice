@@ -11,7 +11,7 @@ function sumofmultiples(max) {
   return x;
 }
 
-assert(sumofmultiples(10) === 23, 'given failed');
+assert(sumofmultiples(10) === 23);
 
 let answer = sumofmultiples(1000);
 console.log(answer);

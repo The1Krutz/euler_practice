@@ -1,6 +1,6 @@
 import assert from 'assert';
 import {} from './helpers.js';
-console.log('\nproblem_00x');
+console.log('\nproblem_0xx');
 
 
 
