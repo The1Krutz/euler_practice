@@ -1,6 +1,6 @@
 import assert from 'assert';
 
-export const low_primes = [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 ];
+export const low_primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
 
 /**
  *
@@ -44,6 +44,28 @@ for(const prime of low_primes) {
 }
 assert(!isPrime(1), 'isPrime needs help');
 assert(!isPrime(8), 'isPrime needs help');
+
+/**
+ *
+ * @param {number} number
+ */
+export function getFactors(number) {
+  let factors = [], stop = number;
+
+  for(let i = 1; i < stop; i++) {
+    const a = number / i;
+    if(a === Math.floor(a)) {
+      factors.push(i);
+      factors.push(a);
+      stop = a;
+    }
+  }
+
+  return factors.sort();
+}
+
+assert(arrayEquals(getFactors(12), [1, 2, 3, 4, 6, 12]), 'getFactors needs help');
+assert(arrayEquals(getFactors(30), [1, 2, 3, 5, 6, 10, 15, 30]), 'getFactors needs help');
 
 /**
  *
