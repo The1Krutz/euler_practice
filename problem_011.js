@@ -1,5 +1,4 @@
 import assert from 'assert';
-import {} from './helpers.js';
 console.log('\nproblem_011');
 
 const originalGrid = [

@@ -1,5 +1,4 @@
 import assert from 'assert';
-import {} from './helpers.js';
 console.log('\nproblem_013');
 
 const numbers = [

@@ -1,5 +1,5 @@
 import assert from 'assert';
-import {arrayEquals, isPrime, getFactors} from './helpers.js';
+import {arrayEquals, getFactors, isPrime} from './helpers.js';
 console.log('\nproblem_003');
 
 /**

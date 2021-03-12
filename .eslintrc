@@ -43,6 +43,22 @@
         "no-unused-vars": "warn",
         "comma-spacing": "warn",
         "semi-spacing": "warn",
-        "array-bracket-spacing":"warn"
+        "array-bracket-spacing": "warn",
+        "sort-imports": [
+            "warn",
+            {
+                "ignoreCase": true,
+                "ignoreDeclarationSort": false,
+                "ignoreMemberSort": false,
+                "memberSyntaxSortOrder": [
+                    "all",
+                    "single",
+                    "multiple",
+                    "none"
+                ],
+                "allowSeparatedGroups": true
+            }
+        ],
+        "object-curly-spacing": "warn"
     }
 }

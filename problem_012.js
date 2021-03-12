@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { getFactors } from './helpers.js';
+import {getFactors} from './helpers.js';
 console.log('\nproblem_012');
 
 /**

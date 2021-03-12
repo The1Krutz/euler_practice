@@ -1,5 +1,4 @@
 import assert from 'assert';
-import { TimedCall } from './helpers.js';
 console.log('\nproblem_014');
 
 let collatz_cache = {};
@@ -52,6 +51,6 @@ function findLongestCollatzUnderX(x) {
   return longest_start;
 }
 
-let answer = TimedCall(()=>findLongestCollatzUnderX(1000000));
+let answer = findLongestCollatzUnderX(1000000);
 console.log(answer);
 assert(answer === 837799);
