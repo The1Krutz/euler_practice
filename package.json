@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "find . -iname \"problem_*\" -exec node {} \\;",
-    "start":"nodemon problem_011.js"
+    "start":"nodemon problem_014.js"
   },
   "repository": {
     "type": "git",
