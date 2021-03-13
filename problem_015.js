@@ -35,7 +35,7 @@ assert(nck(4, 2) === 6, 'nck needs help');
  * @param {number} s
  */
 function latticePath(s) {
-  return +nck(s + s, s).toFixed(0);
+  return Math.trunc(nck(s + s, s));
 }
 
 assert(latticePath(1) === 2, 'given needs help');
