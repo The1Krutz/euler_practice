@@ -12,14 +12,14 @@ function collatz(n) {
   let counter = 1, x = n;
 
   while (n !== 1) {
-    if(n % 2 === 0) {
+    if (n % 2 === 0) {
       // even
       n = n / 2;
     } else {
       //odd
       n = 3 * n + 1;
     }
-    if(collatz_cache[n]) {
+    if (collatz_cache[n]) {
       counter += collatz_cache[n];
       break;
     }
@@ -40,9 +40,9 @@ assert(collatz(13) === 10);
 function findLongestCollatzUnderX(x) {
   let longest_length = 1, longest_start = 1;
 
-  for(let i = 1; i < x; i++) {
+  for (let i = 1; i < x; i++) {
     let temp = collatz(i);
-    if(temp > longest_length) {
+    if (temp > longest_length) {
       longest_length = temp;
       longest_start = i;
     }

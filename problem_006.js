@@ -7,7 +7,7 @@ console.log('\nproblem_006');
  */
 function sumofsquares(max) {
   let sum = 0;
-  for(let i = 1; i <= max; i++) {
+  for (let i = 1; i <= max; i++) {
     sum += i * i;
   }
   return sum;
@@ -23,7 +23,7 @@ assert(sumofsquares(10) === 385, 'sumofsquares needs help');
  */
 function squareofsums(max) {
   let sum = 0;
-  for(let i = 1; i <= max; i++) {
+  for (let i = 1; i <= max; i++) {
     sum += i;
   }
   return sum * sum;

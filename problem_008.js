@@ -10,14 +10,14 @@ const thousanddigits = '73167176531330624919225119674426574742355349194934969835
 function largestAdjacentProduct(series) {
   let product = 0, a = 0, b = series;
 
-  while(b <= thousanddigits.length) {
+  while (b <= thousanddigits.length) {
     let slice = thousanddigits.slice(a, b);
     let tempProduct = 1;
 
-    for(let i in slice)
+    for (let i in slice)
       tempProduct *= +(slice[i]);
 
-    if(tempProduct > product)
+    if (tempProduct > product)
       product = tempProduct;
 
     a++;

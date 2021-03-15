@@ -59,6 +59,8 @@
                 "allowSeparatedGroups": true
             }
         ],
-        "object-curly-spacing": "warn"
+        "object-curly-spacing": "warn",
+        "space-in-parens": "warn",
+        "keyword-spacing": "warn"
     }
 }

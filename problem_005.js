@@ -10,9 +10,9 @@ function getPrimeFactorization(number) {
   assert(number > 1, `don't use this on 1 please`);
   let factorization = [], max = number;
 
-  while(max > 1) {
-    for(const prime of low_primes) {
-      if(max % prime === 0) {
+  while (max > 1) {
+    for (const prime of low_primes) {
+      if (max % prime === 0) {
         factorization.push(prime);
         max /= prime;
         break;
@@ -37,9 +37,9 @@ function LCM(factors) {
   let factorizations = factors.map(z=>getPrimeFactorization(z));
   let lcmf = [];
 
-  for(let prime of low_primes) {
+  for (let prime of low_primes) {
     let primeCount = Math.max(...factorizations.map(z=>z.filter(y=>y === prime).length));
-    while(primeCount-- > 0) {
+    while (primeCount-- > 0) {
       lcmf.push(prime);
     }
   }

@@ -4,8 +4,8 @@ console.log('\nproblem_007');
 function nth_prime(n) {
   let a = 3, primes = [2];
 
-  while(primes.length < n) {
-    if(primes.every(prime=>a % prime !== 0)) {
+  while (primes.length < n) {
+    if (primes.every(prime=>a % prime !== 0)) {
       primes.push(a);
     }
     a += 2;

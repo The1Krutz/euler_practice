@@ -112,8 +112,6 @@ function getAnswer(list) {
     .substring(0, 10);
 }
 
-
-
 let answer = getAnswer(numbers);
 console.log(answer);
 assert(answer === 5537376230);

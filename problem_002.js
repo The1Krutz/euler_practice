@@ -4,11 +4,11 @@ console.log('\nproblem_002');
 function fibsum (max) {
   let a = 1, b = 2, c = 0, sum = 2;
 
-  while(c < max) {
+  while (c < max) {
     c = a + b;
     a = b;
     b = c;
-    if(c % 2 === 0)sum += c;
+    if (c % 2 === 0)sum += c;
   }
 
   return sum;

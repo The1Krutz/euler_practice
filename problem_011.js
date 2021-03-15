@@ -25,7 +25,6 @@ const originalGrid = [
 ];
 const groupSize = 4;
 
-
 /**
  *
  * @param {number[][]} grid
@@ -34,10 +33,10 @@ const groupSize = 4;
 function getHorizontalGroups(grid, size) {
   let groups = [];
 
-  for(let i = 0; i < grid.length; i++) {
+  for (let i = 0; i < grid.length; i++) {
     let row = grid[i], a = 0, b = size;
 
-    while(b <= row.length) {
+    while (b <= row.length) {
       let slice = row.slice(a, b);
       groups.push(slice);
       a++;
@@ -57,10 +56,10 @@ assert(getHorizontalGroups(originalGrid, groupSize).length === 340);
 function getVerticalGroups(grid, size) {
   let groups = [];
 
-  for(let a = 0; a < grid.length; a++) {
+  for (let a = 0; a < grid.length; a++) {
     let b = size;
 
-    while(b <= grid.length) {
+    while (b <= grid.length) {
       let slice = [grid[b - 4][a], grid[b - 3][a], grid[b - 2][a], grid[b - 1][a]];
       groups.push(slice);
       b++;
@@ -79,10 +78,10 @@ assert(getVerticalGroups(originalGrid, groupSize).length === 340);
 function getDownRightDiagonalGroups(grid, size) {
   let groups = [];
 
-  for(let a = size; a <= grid.length; a++) {
+  for (let a = size; a <= grid.length; a++) {
     let b = size;
 
-    while(b <= grid.length) {
+    while (b <= grid.length) {
       let slice = [grid[b - 4][a - 4], grid[b - 3][a - 3], grid[b - 2][a - 2], grid[b - 1][a - 1]];
       groups.push(slice);
       b++;
@@ -101,10 +100,10 @@ assert(getDownRightDiagonalGroups(originalGrid, groupSize).length === 289);
 function getUpRightDiagonalGroups(grid, size) {
   let groups = [];
 
-  for(let a = size - 1; a < grid.length; a++) {
+  for (let a = size - 1; a < grid.length; a++) {
     let b = 0;
 
-    while(b <= grid.length - size) {
+    while (b <= grid.length - size) {
       let slice = [grid[b][a], grid[b + 1][a - 1], grid[b + 2][a - 2], grid[b + 3][a - 3]];
       groups.push(slice);
       b++;

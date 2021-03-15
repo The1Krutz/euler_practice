@@ -5,10 +5,10 @@ function sumOfPrimesBelowN(n) {
   let a = 3, primes = [2], runningTotal = 2;
   let max = n > 1000000 ? n / 1000 : n;
 
-  while(a < n) {
-    if(primes.every(prime=>a % prime !== 0)) {
+  while (a < n) {
+    if (primes.every(prime=>a % prime !== 0)) {
       runningTotal += a;
-      if(a < max)
+      if (a < max)
         primes.push(a);
     }
     a += 2;

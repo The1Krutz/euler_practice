@@ -11,10 +11,10 @@ export function arrayEquals(arr1, arr2) {
   arr1 = arr1.sort();
   arr2 = arr2.sort();
 
-  if(arr1.length !== arr2.length) return false;
+  if (arr1.length !== arr2.length) return false;
 
-  for(let i = 0; i < arr1.length; i++) {
-    if(arr1[i] !== arr2[i]) return false;
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) return false;
   }
 
   return true;
@@ -28,18 +28,18 @@ assert(arrayEquals([1, 3, 5], [1, 5, 3]), 'arrayEquals needs help');
  * @param {number} number
  */
 export function isPrime(number) {
-  if(number === 1) return false; // edge case
+  if (number === 1) return false; // edge case
   // fast check for even numbers lets us be more efficient later
-  if(number === 2) return true;
-  if(number % 2 === 0) return false;
+  if (number === 2) return true;
+  if (number % 2 === 0) return false;
 
-  for(let i = 3; i < number; i += 2)
-    if(number % i === 0)
+  for (let i = 3; i < number; i += 2)
+    if (number % i === 0)
       return false;
   return true;
 }
 
-for(const prime of low_primes) {
+for (const prime of low_primes) {
   assert(isPrime(prime), 'isPrime needs help');
 }
 assert(!isPrime(1), 'isPrime needs help');
@@ -52,9 +52,9 @@ assert(!isPrime(8), 'isPrime needs help');
 export function getFactors(number) {
   let factors = [], stop = number;
 
-  for(let i = 1; i < stop; i++) {
+  for (let i = 1; i < stop; i++) {
     const a = number / i;
-    if(a === Math.floor(a)) {
+    if (a === Math.floor(a)) {
       factors.push(i);
       factors.push(a);
       stop = a;

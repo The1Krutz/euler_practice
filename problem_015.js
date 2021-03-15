@@ -7,7 +7,7 @@ console.log('\nproblem_015');
  */
 function factorial(n) {
   let result = 1;
-  while(n > 1) {
+  while (n > 1) {
     result *= n;
     n--;
   }

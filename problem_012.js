@@ -9,7 +9,7 @@ console.log('\nproblem_012');
 function firstTriangleOverNFactors(n) {
   let a = 0, triangle = 0;
 
-  while(getFactors(triangle).length < n) {
+  while (getFactors(triangle).length < n) {
     triangle += a;
     a++;
   }
