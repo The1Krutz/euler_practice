@@ -10,7 +10,8 @@
   },
   "scripts": {
     "test": "find . -iname \"problem_*\" -exec node {} \\;",
-    "start":"nodemon problem_016.js"
+    "start":"nodemon problem_067.js",
+    "lint":"eslint problem_*.js"
   },
   "repository": {
     "type": "git",
